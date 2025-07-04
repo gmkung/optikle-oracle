@@ -1,0 +1,303 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 25% 10%;
+    --foreground: 220 20% 98%;
+
+    --card: 260 30% 12%;
+    --card-foreground: 220 20% 98%;
+
+    --popover: 260 30% 12%;
+    --popover-foreground: 220 20% 98%;
+
+    --primary: 270 80% 96%;
+    --primary-foreground: 260 30% 12%;
+
+    --secondary: 280 40% 20%;
+    --secondary-foreground: 220 20% 98%;
+
+    --muted: 260 30% 15%;
+    --muted-foreground: 220 20% 85%;
+
+    --accent: 275 80% 65%;
+    --accent-foreground: 220 20% 98%;
+
+    --destructive: 0 80% 50%;
+    --destructive-foreground: 220 20% 98%;
+
+    --border: 260 30% 20%;
+    --input: 260 30% 20%;
+    --ring: 275 80% 65%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 260 35% 8%;
+    --sidebar-foreground: 220 20% 98%;
+    --sidebar-primary: 270 80% 96%;
+    --sidebar-primary-foreground: 260 30% 12%;
+    --sidebar-accent: 275 80% 65%;
+    --sidebar-accent-foreground: 220 20% 98%;
+    --sidebar-border: 260 30% 20%;
+    --sidebar-ring: 275 80% 65%;
+  }
+
+  .dark {
+    --background: 260 25% 8%;
+    --foreground: 220 20% 98%;
+
+    --card: 260 30% 10%;
+    --card-foreground: 220 20% 98%;
+
+    --popover: 260 30% 10%;
+    --popover-foreground: 220 20% 98%;
+
+    --primary: 270 80% 96%;
+    --primary-foreground: 260 30% 12%;
+
+    --secondary: 280 40% 18%;
+    --secondary-foreground: 220 20% 98%;
+
+    --muted: 260 30% 15%;
+    --muted-foreground: 220 20% 80%;
+
+    --accent: 275 80% 60%;
+    --accent-foreground: 220 20% 98%;
+
+    --destructive: 0 80% 45%;
+    --destructive-foreground: 220 20% 98%;
+
+    --border: 260 30% 15%;
+    --input: 260 30% 15%;
+    --ring: 275 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239F7AEA' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+  
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom scrollbar */
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+  
+  /* Glass effect utilities */
+  .glass {
+    @apply bg-card/70 backdrop-blur-lg border border-white/5 shadow-[0_8px_32px_rgba(155,135,245,0.15)];
+  }
+  
+  .glass-card {
+    @apply bg-card/90 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(155,135,245,0.2)];
+  }
+  
+  .neon-border {
+    @apply border border-purple-400/20 shadow-[0_0_15px_rgba(155,135,245,0.3),inset_0_0_15px_rgba(155,135,245,0.1)];
+  }
+  
+  .neon-glow {
+    @apply animate-neon-pulse;
+  }
+
+  /* Elegant pattern background */
+  .elegant-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239F7AEA' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6h-2c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .futuristic-grid {
+    @apply bg-futuristic-grid;
+  }
+  
+  .circuit-pattern {
+    @apply bg-circuit-pattern;
+  }
+
+  /* Elegant gradient background */
+  .elegant-gradient {
+    @apply bg-gradient-elegant;
+  }
+  
+  .casino-gradient {
+    @apply bg-casino-gradient;
+  }
+  
+  .neon-gradient {
+    @apply bg-neon-gradient;
+  }
+
+  /* Subtle glow effect */
+  .subtle-glow {
+    box-shadow: 0 0 15px rgba(159, 122, 234, 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+  .subtle-glow:hover {
+    box-shadow: 0 0 25px rgba(159, 122, 234, 0.25);
+  }
+
+  /* Elegant border */
+  .elegant-border {
+    border-image: linear-gradient(to right, rgba(159, 122, 234, 0.3), rgba(130, 100, 180, 0.3)) 1;
+    border-width: 1px;
+    border-style: solid;
+  }
+  
+  /* Casino chip effect */
+  .casino-chip {
+    @apply relative rounded-full overflow-hidden border-4 border-purple-400/30 p-2;
+    background: radial-gradient(circle at center, rgba(43, 36, 64, 1) 0%, rgba(29, 26, 47, 1) 70%);
+    box-shadow: 0 0 0 4px rgba(159, 122, 234, 0.1), 
+                0 0 15px rgba(159, 122, 234, 0.2);
+  }
+  
+  /* Futuristic button glow */
+  .btn-glow {
+    @apply relative overflow-hidden;
+  }
+  
+  .btn-glow::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 bg-gradient-to-r from-purple-400/30 to-pink-400/30;
+    transition: opacity 0.3s ease;
+  }
+  
+  .btn-glow:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* Casino card style */
+  .casino-card {
+    @apply bg-gradient-to-b from-dark-light to-dark-dark p-4 rounded-xl border border-purple-400/20;
+    box-shadow: 0 10px 25px -5px rgba(29, 26, 47, 0.8), 
+                0 8px 10px -6px rgba(29, 26, 47, 0.6),
+                0 0 0 1px rgba(159, 122, 234, 0.1);
+  }
+}
+
+/* Animation utilities */
+@layer components {
+  .animate-in {
+    animation: fade-in 0.3s ease-out forwards;
+  }
+  
+  .animate-out {
+    animation: fade-out 0.3s ease-out forwards;
+  }
+
+  .animate-gentle {
+    animation: gentle 5s ease-in-out infinite;
+  }
+
+  @keyframes gentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Neon text effect */
+  .neon-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400;
+    text-shadow: 0 0 10px rgba(159, 122, 234, 0.5);
+  }
+  
+  /* Futuristic button */
+  .futuristic-btn {
+    @apply relative overflow-hidden bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 rounded-md;
+    box-shadow: 0 0 10px rgba(159, 122, 234, 0.3),
+                0 0 20px rgba(159, 122, 234, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .futuristic-btn:hover {
+    @apply from-purple-600 to-purple-800;
+    box-shadow: 0 0 15px rgba(159, 122, 234, 0.4),
+                0 0 30px rgba(159, 122, 234, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .futuristic-btn:active {
+    transform: translateY(1px);
+  }
+  
+  /* Holographic effect */
+  .holographic {
+    @apply relative overflow-hidden;
+    background: linear-gradient(135deg, 
+      rgba(159, 122, 234, 0.1) 0%, 
+      rgba(217, 70, 239, 0.1) 25%, 
+      rgba(159, 122, 234, 0.1) 50%, 
+      rgba(79, 209, 197, 0.1) 75%, 
+      rgba(159, 122, 234, 0.1) 100%);
+    background-size: 400% 400%;
+    animation: holographic 8s ease infinite;
+  }
+  
+  @keyframes holographic {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+  }
+}
