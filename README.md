@@ -14,3 +14,11 @@ A modern React interface for interacting with Reality.eth questions and Kleros a
 - Tailwind CSS + shadcn/ui components
 - Ethers.js for Web3 integration
 - reality-data-service for data fetching
+
+
+## Installation
+
+```bash
+npm install
+npm run dev
+```
