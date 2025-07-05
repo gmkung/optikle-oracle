@@ -2842,10 +2842,10 @@ readdirp@~3.6.0:
   dependencies:
     picomatch "^2.2.1"
 
-reality-data-service@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/reality-data-service/-/reality-data-service-0.6.2.tgz#54b89352c50c65507c820780d8396330d5dcb157"
-  integrity sha512-wg+SgC+gVKtOzLmHZr77SkLQQeBLj++A4z7PFOktTLnLj+LUlLpsI0QnuwNoidOuxax2UJR1D8Eoor0V2jWseQ==
+reality-data-service@^0.6.5:
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/reality-data-service/-/reality-data-service-0.6.5.tgz#2a4827d39a413c064881671f6e4c4328c09b1417"
+  integrity sha512-iolfWZbP1fcD81A/R+8Aw7GeO9xF7NKcCVb0P3D+iLKd9/mNQvCYVZ0YevKAgfnfeou4lbI/gdGS7KiELfqEag==
 
 recharts-scale@^0.4.4:
   version "0.4.5"

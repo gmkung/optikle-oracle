@@ -331,6 +331,7 @@ export const DEFAULT_ARBITRATORS: { [key: string]: string } = {
   ethereum: '0x988b3A538b618C7A603e1c11Ab82Cd16dbE28069', // Kleros Court
   gnosis: '0x68154EA682f95BF582b80Dd6453FA401737491Dc', // Kleros Court on Gnosis
   polygon: '0x5AFa42b30955f137e10f89dfb5EF1542a186F90e', // Kleros Court on Polygon
+  sepolia: '0x92F1548e69d43E44F06aCaFdd6A5a951a1c1e055', // Kleros proxy  on Sepolia
 };
 
 // Template for single-select questions

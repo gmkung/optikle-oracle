@@ -69,8 +69,13 @@ export const useArbitrationRequest = (question: Question | null) => {
 
   const getContract = async () => {
     if (!foreignProxyInfo?.foreignProxyAddress) {
+      console.error('getContract: Foreign proxy address not found', foreignProxyInfo);
       throw new Error('Foreign proxy address not found');
     }
+    
+    console.log('getContract: Using foreign proxy address:', foreignProxyInfo.foreignProxyAddress);
+    console.log('getContract: Foreign chain info:', foreignProxyInfo);
+    
     const provider = new ethers.BrowserProvider(window.ethereum);
     const signer = await provider.getSigner();
     return new ethers.Contract(
@@ -97,10 +102,19 @@ export const useArbitrationRequest = (question: Question | null) => {
         disputeFee: feeInEth,
         isLoading: false,
       }));
-    } catch (error) {
+    } catch (error: any) {
+      console.error('Contract data loading error:', error);
+      
+      let errorMessage = 'Failed to load contract data';
+      if (error.reason) {
+        errorMessage = `Contract error: ${error.reason}`;
+      } else if (error.message) {
+        errorMessage = `Error: ${error.message}`;
+      }
+      
       setState(prev => ({
         ...prev,
-        error: 'Failed to load contract data',
+        error: errorMessage,
         isLoading: false,
       }));
     }
@@ -185,11 +199,17 @@ export const useArbitrationRequest = (question: Question | null) => {
         isSuccess: true,
       }));
     } catch (error: any) {
+      console.error('Arbitration request error:', error);
+      
       let errorMessage = 'Failed to request arbitration';
       if (error.code === 4001) {
         errorMessage = 'Transaction was rejected by user';
       } else if (error.code === 'INSUFFICIENT_FUNDS') {
         errorMessage = 'Insufficient funds for transaction';
+      } else if (error.reason) {
+        errorMessage = `Contract error: ${error.reason}`;
+      } else if (error.message) {
+        errorMessage = `Error: ${error.message}`;
       }
 
       setState(prev => ({

@@ -35,6 +35,8 @@ const CHAIN_IDS = {
   ethereum: '0x1',      // 1
   gnosis: '0x64',       // 100
   polygon: '0x89',      // 137
+  sepolia: '0xaa36a7',  // 11155111
+  'arbitrum sepolia': '0x66eee', // 421614
 } as const;
 
 const questionSchema = z.object({
