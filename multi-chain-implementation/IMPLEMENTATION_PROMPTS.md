@@ -1,6 +1,6 @@
-# Multi-Chain Kleros Optimistic Oracle Implementation Prompts
+# Multi-Chain Optikle Implementation Prompts
 
-This document breaks down the comprehensive Multi-Chain Kleros Optimistic Oracle Implementation Guide into 5 focused prompts that are easy for an LLM agent to digest and implement sequentially. Each prompt builds upon the previous one, preserving all technical details while being focused and actionable.
+This document breaks down the comprehensive Multi-Chain Optikle (Kleros Optimistic Oracle) Implementation Guide into 5 focused prompts that are easy for an LLM agent to digest and implement sequentially. Each prompt builds upon the previous one, preserving all technical details while being focused and actionable.
 
 ## Prompt 1: Web3 Integration and Chain Setup
 
@@ -2689,4 +2689,4 @@ INFURA_API_KEY=your_infura_key
 WALLETCONNECT_PROJECT_ID=your_walletconnect_id
 ```
 
-This implementation guide provides a complete roadmap for building a fully functional multi-chain Kleros Optimistic Oracle with question creation, answer submission, and dispute functionality while maintaining compatibility with IPFS deployment.
+This implementation guide provides a complete roadmap for building a fully functional multi-chain Kleros Oracle with question creation, answer submission, and dispute functionality while maintaining compatibility with IPFS deployment.

@@ -1,8 +1,8 @@
-# Multi-Chain Kleros Optimistic Oracle Implementation Guide
+# Multi-Chain Optikle Implementation Guide
 
 ## Overview
 
-This guide provides a comprehensive roadmap for recreating a multi-chain version of the Kleros Optimistic Oracle application with full question creation and dispute functionality. The implementation will support **Ethereum**, **Gnosis**, and **Polygon** chains, enabling users to create questions, submit answers, and initiate disputes across all three networks.
+This guide provides a comprehensive roadmap for recreating a multi-chain version of the Optikle application with full question creation and dispute functionality. The implementation will support **Ethereum**, **Gnosis**, and **Polygon** chains, enabling users to create questions, submit answers, and initiate disputes across all three networks.
 
 ## Current Architecture Analysis
 
@@ -1619,8 +1619,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
 }
 
 export const metadata = {
-  title: 'Kleros Optimistic Oracle',
-  description: 'Multi-chain Reality.eth questions and disputes',
+  title: 'Optikle Oracle',
+  description: 'Multi-chain Reality.eth questions and disputes secured by Kleros and LayerZero',
 };
 ```
 
@@ -2572,4 +2572,4 @@ WALLETCONNECT_PROJECT_ID=your_walletconnect_id
 4. **E2E Tests**: Test complete user journeys from question creation to dispute resolution
 5. **Security Tests**: Audit smart contract interactions and validate input sanitization
 
-This comprehensive guide provides the foundation for implementing a fully functional multi-chain Kleros Optimistic Oracle with complete question creation and dispute functionality while preserving the existing data fetching capabilities.
+This comprehensive guide provides the foundation for implementing a fully functional multi-chain Optikle with complete question creation and dispute functionality while preserving the existing data fetching capabilities.

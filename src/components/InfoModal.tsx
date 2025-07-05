@@ -30,7 +30,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ open, onOpenChange }) => {
         
         <div className="space-y-4 mt-2">
           <p className="text-sm">
-            The Kleros Optimistic Oracle harnesses advanced cryptographic algorithms and game theory mechanics to facilitate 
+          Optikle harnesses advanced cryptographic algorithms and game theory mechanics to facilitate 
             distributed consensus verification across decentralized networks.
           </p>
           

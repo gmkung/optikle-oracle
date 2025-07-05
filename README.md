@@ -1,4 +1,4 @@
-# Kleros Optimistic Oracle Interface
+# Optikle Oracle Interface
 
 A modern React interface for interacting with Reality.eth questions and Kleros arbitration.
 
