@@ -737,3 +737,4 @@ const CreateQuestionModal: React.FC<CreateQuestionModalProps> = ({
 export default CreateQuestionModal; // Enhanced wallet integration for better UX
 // Improved wallet connection handling for better UX
 // Improved wallet connection status indicators
+// Improved wallet connection status indicators
