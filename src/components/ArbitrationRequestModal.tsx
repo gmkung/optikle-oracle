@@ -59,13 +59,12 @@ const ArbitrationRequestModal: React.FC<ArbitrationRequestModalProps> = ({
     txHash,
     disputeFee,
     gasEstimate,
-    walletConnected,
-    needsChainSwitch,
     foreignProxyInfo,
     canRequest,
     isRequested,
     hasRequiredData,
     // Actions
+    checkWallet,
     connectWallet,
     switchToForeignChain,
     loadContractData,
@@ -280,28 +279,7 @@ const ArbitrationRequestModal: React.FC<ArbitrationRequestModalProps> = ({
               </Card>
             )}
 
-            {/* Chain Mismatch Warning */}
-            {needsChainSwitch && walletConnected && foreignProxyInfo && (
-              <Alert className="border-amber-500">
-                <AlertTriangle className="h-4 w-4" />
-                <AlertDescription className="flex items-center justify-between">
-                  <div>
-                    <p className="font-medium">Wrong Network</p>
-                    <p className="text-sm">
-                      Switch to {foreignProxyInfo.foreignChain} to request arbitration.
-                    </p>
-                  </div>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={handleSwitchChain}
-                    className="ml-4"
-                  >
-                    Switch Network
-                  </Button>
-                </AlertDescription>
-              </Alert>
-            )}
+            {/* Chain Mismatch Warning - will be shown dynamically when needed */}
 
             {/* Costs */}
             <Card>
@@ -314,8 +292,8 @@ const ArbitrationRequestModal: React.FC<ArbitrationRequestModalProps> = ({
               <CardContent className="space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">Wallet Status</span>
-                  <span className={`text-sm font-medium ${walletConnected ? 'text-green-600' : 'text-amber-600'}`}>
-                    {walletConnected ? 'Connected' : 'Not Connected'}
+                  <span className="text-sm font-medium text-muted-foreground">
+                    Check wallet connection
                   </span>
                 </div>
                 
@@ -349,17 +327,15 @@ const ArbitrationRequestModal: React.FC<ArbitrationRequestModalProps> = ({
                   </div>
                 )}
 
-                {!walletConnected && (
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={handleConnectWallet}
-                    className="w-full"
-                  >
-                    <Wallet className="h-4 w-4 mr-2" />
-                    Connect Wallet
-                  </Button>
-                )}
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={handleConnectWallet}
+                  className="w-full"
+                >
+                  <Wallet className="h-4 w-4 mr-2" />
+                  Connect Wallet
+                </Button>
               </CardContent>
             </Card>
 
@@ -467,6 +443,4 @@ const ArbitrationRequestModal: React.FC<ArbitrationRequestModalProps> = ({
   );
 };
 
-export default ArbitrationRequestModal; // Final polish: Enhanced error handling and user feedback
-// Enhanced error handling and user feedback messages
-// Enhanced error handling and user feedback messages
+export default ArbitrationRequestModal; 
