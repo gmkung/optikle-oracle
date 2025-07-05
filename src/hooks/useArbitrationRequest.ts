@@ -237,3 +237,4 @@ export const useArbitrationRequest = (question: Question | null) => {
 export default useArbitrationRequest; // Fixed memory leak issue in arbitration request hook
 // Critical fix: Memory leak resolved in arbitration request hook
 // Fixed memory leak by removing automatic event listeners
+// Fixed memory leak by removing automatic event listeners
