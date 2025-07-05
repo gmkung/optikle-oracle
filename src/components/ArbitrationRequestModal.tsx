@@ -469,3 +469,4 @@ const ArbitrationRequestModal: React.FC<ArbitrationRequestModalProps> = ({
 
 export default ArbitrationRequestModal; // Final polish: Enhanced error handling and user feedback
 // Enhanced error handling and user feedback messages
+// Enhanced error handling and user feedback messages

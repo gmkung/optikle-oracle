@@ -99,3 +99,4 @@ export function truncateText(text: string, maxLength: number): string {
 }
 // Improved formatting utilities for better data display
 // Improved data formatting for better display consistency
+// Improved data formatting for better display consistency
